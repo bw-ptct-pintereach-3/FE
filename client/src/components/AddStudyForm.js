@@ -2,15 +2,15 @@ import React from "react";
 import Loader from "react-loader-spinner";
 import { connect } from "react-redux";
 import styled from "styled-components";
-// import { Pin } from "styled-icons/boxicons-solid/Pin";
+import { Pin } from "@styled-icons/boxicons-solid/Pin";
 import { addStudy } from "../actions";
 
-// const PinRed = styled(Pin)`
-//   color: red;
-//   height: 30px;
-//   width: 30px;
-//   transform: rotate(-20deg);
-// `;
+const PinRed = styled(Pin)`
+  color: red;
+  height: 30px;
+  width: 30px;
+  transform: rotate(-20deg);
+`;
 
 class AddStudyForm extends React.Component {
   state = {
@@ -55,7 +55,7 @@ class AddStudyForm extends React.Component {
           <div className="add-study-form">
             <form onSubmit={this.addStudy}>
               <h2>
-                {/* <PinRed />  */}
+                <PinRed /> 
                 Add Pins to a Board
               </h2>
 

@@ -10,9 +10,6 @@
     "formik": "^2.1.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-<<<<<<< HEAD
-    "react-scripts": "3.4.1",
-=======
     "react-loader-spinner": "^3.1.14",
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.2.0",
@@ -22,7 +19,6 @@
     "redux-thunk": "^2.3.0",
     "styled-components": "^5.1.0",
     "styled-icons": "^10.2.1",
->>>>>>> master
     "yup": "^0.29.0"
   },
   "scripts": {

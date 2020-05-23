@@ -3,23 +3,23 @@ import Loader from "react-loader-spinner";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-// import { Pin } from "styled-icons/boxicons-solid/Pin";
+import { Pin } from "@styled-icons/boxicons-solid/Pin";
 import { signup } from "../actions";
 // import "../styles/Signup.css";
-// import { Github } from "styled-icons/boxicons-logos/Github";
+import { Github } from "@styled-icons/boxicons-logos/Github";
 
-// const PinRed = styled(Pin)`
-//   color: red;
-//   height: 40px;
-//   width: 40px;
-// `;
+const PinRed = styled(Pin)`
+  color: red;
+  height: 40px;
+  width: 40px;
+`;
 
-// const GithubLogo = styled(Github)`
-//   color: black;
-//   height: 30px;
-//   width: 30px;
-//   cursor: pointer;
-// `;
+const GithubLogo = styled(Github)`
+  color: black;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+`;
 
 class Signup extends React.Component {
   state = {
@@ -52,7 +52,7 @@ class Signup extends React.Component {
         <div className="step-1">
           <section className="form-entry">
             <h1>
-              {/* <PinRed /> */}
+              <PinRed />
               Pintereach
             </h1>
             <h2>
@@ -103,7 +103,7 @@ class Signup extends React.Component {
         </div>
         <footer>
           <a href="xxxxxxxxx">
-            {/* <GithubLogo /> */}
+            <GithubLogo />
           </a>
           <p> &copy; 2020 Pintereach</p>
         </footer>

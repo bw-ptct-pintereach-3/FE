@@ -3,16 +3,16 @@ import Loader from "react-loader-spinner";
 import { connect } from "react-redux";
 import { Link, Route } from "react-router-dom";
 import styled from "styled-components";
-// import { PlusCircle } from "styled-icons/boxicons-regular/PlusCircle";
+import { PlusCircle } from "@styled-icons/boxicons-regular/PlusCircle";
 import { deleteArticle, getData, getData2, getData3 } from "../actions";
 import ArticleFeed from "./ArticleFeed";
 import BoardFeed from "./BoardFeed";
 
-// const AddWhite = styled(PlusCircle)`
-//   color: white;
-//   height: 25px;
-//   width: 25px;
-// `;
+const AddWhite = styled(PlusCircle)`
+  color: white;
+  height: 25px;
+  width: 25px;
+`;
 
 class UserHome extends React.Component {
   constructor() {
@@ -69,13 +69,13 @@ class UserHome extends React.Component {
         <div className="side">
           <Link to="/add-board">
             <button>
-              {/* <AddWhite /> */}
+              <AddWhite />
               Add Board
             </button>
           </Link>
           <Link to="/add-pin">
             <button className="last">
-              {/* <AddWhite /> */}
+              <AddWhite />
               Add Pin
             </button>
           </Link>

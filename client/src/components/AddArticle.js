@@ -11,7 +11,6 @@ const formSchema = yup.object().shape({
         .required("An article category is required.")
 });
 
-
 const AddArticle = () => {
 
     const [formState, setFormState] = useState({

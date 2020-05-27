@@ -5,6 +5,20 @@ import { Home } from "@styled-icons/boxicons-solid/Home";
 import { Category } from "@styled-icons/material-rounded/Category";
 import { Pin } from "@styled-icons/boxicons-solid/Pin";
 import { UserDetail } from "@styled-icons/boxicons-solid/UserDetail";
+import { ListPlus, ListPlusDimensions } from "@styled-icons/boxicons-regular/ListPlus";
+import { OpenBook } from "@styled-icons/entypo/OpenBook";
+
+const ListPlusBlack = styled(ListPlus)`
+  color: black;
+  height: 30px;
+  width: 30px;
+`;
+
+const OpenBookBlack = styled(OpenBook)`
+  color: black;
+  height: 30px;
+  width: 30px;
+`;
 
 const PinRed = styled(Pin)`
   color: red;
@@ -59,6 +73,14 @@ const NavBar = () => {
 
       <NavLink to="/profile" activeClassName="activeNavBtn">
         <UserBlack />
+      </NavLink>
+
+      <NavLink to="/toReadList" activeClassName="activeNavBtn">
+        <ListPlusBlack />
+      </NavLink>
+
+      <NavLink to="/displayArticles" activeClassName="activeNavBtn">
+        <OpenBookBlack />
       </NavLink>
     </div>
   );

@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { RemoveCircleOutline } from "@styled-icons/material/RemoveCircleOutline";
 
+
 const RemoveCircleOutlineRed = styled(RemoveCircleOutline)`
   color: red;
   height: 20px;

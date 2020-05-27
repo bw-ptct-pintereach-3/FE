@@ -9,6 +9,7 @@ import PrivateRoute from "./components/PrivateRoute";
 import Signup from "./components/Signup";
 import UserHome from "./components/UserHome";
 import UserProfile from "./components/UserProfile";
+import AddArticle from "./components/AddArticle";
 
 export default function App() {
   return (
@@ -20,10 +21,10 @@ export default function App() {
         <div className="body">
           <Route exact path="/" component={Signup} />
           <Route exact path="/login" component={Login} />
-          <PrivateRoute exact path="/home" component={UserHome} />
-          <PrivateRoute exact path="/add-pin" component={AddStudyForm} />
-          <PrivateRoute exact path="/add-board" component={Boards} />
-          <PrivateRoute exact path="/profile" component={UserProfile} />
+          <Route exact path="/home" component={UserHome} />
+          <Route exact path="/add-pin" component={AddArticle} />
+          <Route exact path="/add-board" component={Boards} />
+          <Route exact path="/profile" component={UserProfile} />
         </div>
       </div>
     </Router>

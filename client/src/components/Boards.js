@@ -2,16 +2,16 @@ import React from "react";
 import Loader from "react-loader-spinner";
 import { connect } from "react-redux";
 import styled from "styled-components";
-// import { Categories } from "styled-icons/boxicons-solid/Categories";
+import { Category } from "@styled-icons/material-rounded/Category";
 import { addBoard } from "../actions";
 
-// const CategoriesBlack = styled(Categories)`
-//   color: red;
-//   height: 30px;
-//   width: 30px;
-//   padding-right: 10px;
-//   padding-bottom: 5px;
-// `;
+const CategoryBlack = styled(Category)`
+  color: red;
+  height: 30px;
+  width: 30px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+`;
 
 class Boards extends React.Component {
   state = {
@@ -45,7 +45,7 @@ class Boards extends React.Component {
       <div className="main">
         <div className="add-study-form">
           <h2>
-            {/* <CategoriesBlack /> */}
+            <CategoryBlack />
             Create a Board
           </h2>
 

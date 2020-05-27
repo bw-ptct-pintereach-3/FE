@@ -79,7 +79,7 @@ const AddArticle = () => {
                     value={formState.articleUrl}
                     onChange={inputChange}
                 />
-                {errorState.name.length > 0 ? (
+                {errorState.length > 0 ? (
                     <p className="error">{errorState.articleUrl}</p>
                 ) : null}
                 </label>

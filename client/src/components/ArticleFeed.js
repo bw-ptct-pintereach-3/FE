@@ -1,16 +1,15 @@
 import React from "react";
 import styled from "styled-components";
-// import { RemoveCircleOutline } from "styled-icons/material/RemoveCircleOutline";
-import axios from "axios";
+import { RemoveCircleOutline } from "@styled-icons/material/RemoveCircleOutline";
 
-// const RemoveCircleOutlineRed = styled(RemoveCircleOutline)`
-//   color: red;
-//   height: 20px;
-//   width: 20px;
-//   cursor: pointer;
-//   padding-left: 5px;
-//   float: right;
-// `;
+const RemoveCircleOutlineRed = styled(RemoveCircleOutline)`
+  color: red;
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  padding-left: 5px;
+  float: right;
+`;
 
 class ArticleFeed extends React.Component {
   state = {
@@ -39,7 +38,7 @@ class ArticleFeed extends React.Component {
               {article.link}
             </a>
 
-            {/* <RemoveCircleOutlineRed */}
+            <RemoveCircleOutlineRed
               onClick={() => this.deleteArticle(article.id, article.userid)}
             />
           </div>

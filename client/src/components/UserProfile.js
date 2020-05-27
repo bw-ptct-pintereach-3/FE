@@ -7,7 +7,7 @@ class UserProfile extends React.Component {
   logout = e => {
     e.preventDefault();
     this.props.logout();
-    window.location.href = "https://pintereach.netlify.com/";
+    window.location.href = "xxxxxxxxxxx";
   };
 
   render() {

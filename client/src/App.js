@@ -10,6 +10,8 @@ import Signup from "./components/Signup";
 import UserHome from "./components/UserHome";
 import UserProfile from "./components/UserProfile";
 import AddArticle from "./components/AddArticle";
+import DisplayArticles from "./components/DisplayArticles";
+import NewArticleRenderer from "./components/NewArticleRenderer";
 
 export default function App() {
   return (
@@ -21,10 +23,13 @@ export default function App() {
         <div className="body">
           <Route exact path="/" component={Signup} />
           <Route exact path="/login" component={Login} />
-          <Route exact path="/home" component={UserHome} />
-          <Route exact path="/add-pin" component={AddArticle} />
-          <Route exact path="/add-board" component={Boards} />
-          <Route exact path="/profile" component={UserProfile} />
+          <PrivateRoute exact path="/home" component={UserHome} />
+          <PrivateRoute exact path="/add-pin" component={AddStudyForm} />
+          <PrivateRoute exact path="/add-board" component={Boards} />
+          <PrivateRoute exact path="/profile" component={UserProfile} />
+          <PrivateRoute exact path="/toReadList" component={NewArticleRenderer} /> 
+          <PrivateRoute exact path="/displayArticles" component={DisplayArticles} />
+
         </div>
       </div>
     </Router>

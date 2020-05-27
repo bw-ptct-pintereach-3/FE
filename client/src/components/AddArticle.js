@@ -11,7 +11,7 @@ const formSchema = yup.object().shape({
         .required("An article category is required.")
 });
 
-const AddArticle = () => {
+const AddArticle = (props) => {
 
     const [formState, setFormState] = useState({
         articleUrl: "",
@@ -20,13 +20,13 @@ const AddArticle = () => {
 
     const [errorState, setErrorState] = useState({
         articleUrl: "",
-        category: "",
+        category: ""
     })
 
     const clearForm = () => {
         setFormState({ 
             articleUrl: "",
-            category: "",
+            category: ""
         });
     };
 
@@ -62,12 +62,13 @@ const AddArticle = () => {
     const formSubmit = e => {
         e.preventDefault();
         console.log("form submitted");
+        props.handleFormSubmission(formState);
         clearForm();
     };
 
     return (
         <div>
-            <h2>Add articles here.</h2>
+            <h2>Make a to-read list.</h2>
             <form onSubmit={formSubmit}>
 
                 <label htmlFor="articleUrl">
@@ -80,7 +81,7 @@ const AddArticle = () => {
                     onChange={inputChange}
                 />
                 {errorState.length > 0 ? (
-                    <p className="error">{errorState.articleUrl}</p>
+                    <p>{errorState.articleUrl}</p>
                 ) : null}
                 </label>
 
@@ -92,23 +93,23 @@ const AddArticle = () => {
                     value={formState.category}
                     onChange={inputChange}
                 >
-                    <option value="1">Ecucation</option>
-                    <option value="2">Recreation</option>
-                    <option value="3">Cooking</option>
-                    <option value="4">Shopping</option>
-                    <option value="5">Technology</option>
-                    <option value="6">Entertainment</option>
-                    <option value="7">Professional</option>
-                    <option value="8">Health</option>
-                    <option value="9">Sports</option>
-                    <option value="10">Other</option>
+                    <option value="Education">Education</option>
+                    <option value="Recreation">Recreation</option>
+                    <option value="Cooking">Cooking</option>
+                    <option value="Shopping">Shopping</option>
+                    <option value="Technology">Technology</option>
+                    <option value="Entertainment">Entertainment</option>
+                    <option value="Professional">Professional</option>
+                    <option value="Health">Health</option>
+                    <option value="Sports">Sports</option>
+                    <option value="Other">Other</option>
                 </select>
                 </label>
                     
-                <button>Add Article</button>
+                <button>Add to Your To-read List</button>
             </form>
         </div>
     );
 };
-// note pw = password
+
 export default AddArticle;

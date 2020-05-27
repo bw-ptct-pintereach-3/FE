@@ -7,7 +7,7 @@ export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
 export const login = creds => dispatch => {
   dispatch({ type: LOGIN_START });
   return axios
-    .post("xxxxxxxx", creds)
+    .post("https://pintereach-3-be.herokuapp.com/api/auth/login", creds)
     .then(res => {
       localStorage.setItem("token", res.data.token);
       localStorage.setItem("id", res.data.id);
@@ -18,10 +18,10 @@ export const login = creds => dispatch => {
 export const signup = creds => dispatch => {
   dispatch({ type: SIGNUP_START });
   return axios
-    .post("xxxxxxxxxx", creds)
+    .post("https://pintereach-3-be.herokuapp.com/api/auth/register", creds)
     .then(res => {
       return axios
-        .post("xxxxxxxxxxxx", creds)
+        .post("https://pintereach-3-be.herokuapp.com/api/auth/register", creds)
         .then(res => {
           localStorage.setItem("token", res.data.token);
           dispatch({ type: LOGIN_SUCCESS, payload: res.data });
@@ -36,7 +36,7 @@ export const FETCH_DATA_FAILURE = "FETCH_DATA_FAILURE";
 export const getData = id => dispatch => {
   dispatch({ type: FETCH_DATA_START });
   axios
-    .get(`xxxxxxxxxx`, {
+    .get(`https://pintereach-3-be.herokuapp.com/api/articles/`, {
       headers: { Authorization: localStorage.getItem("token") }
     })
     .then(res => {
@@ -54,7 +54,7 @@ export const FETCH_DATA3_FAILURE = "FETCH_DATA3_FAILURE";
 export const getData3 = () => dispatch => {
   dispatch({ type: FETCH_DATA3_START });
   axios
-    .get("xxxxxxxxxxx", {
+    .get("https://pintereach-3-be.herokuapp.com/api/articles", {
       headers: { Authorization: localStorage.getItem("token") }
     })
     .then(res => {
@@ -72,7 +72,7 @@ export const FETCH_DATA2_FAILURE = "FETCH_DATA2_FAILURE";
 export const getData2 = () => dispatch => {
   dispatch({ type: FETCH_DATA2_START });
   axios
-    .get(`xxxxxxxxxxxxx`, {
+    .get(`https://pintereach-3-be.herokuapp.com/api/articles`, {
       headers: { Authorization: localStorage.getItem("token") }
     })
     .then(res => {
@@ -90,7 +90,7 @@ export const DELETE_FAILURE = "DELETE_FAILURE";
 export const deleteArticle = (id, user_id) => dispatch => {
   dispatch({ type: DELETE_START });
   axios
-    .delete(`xxxxxxxxxxxx`, {
+    .delete(`https://pintereach-3-be.herokuapp.com/api/articles/:id`, {
       headers: { Authorization: localStorage.getItem("token") }
     })
     .then(res => {
@@ -109,7 +109,7 @@ export const ADD_STUDY_FAILURE = "ADD_STUDY_FAILURE";
 export const addStudy = study => dispatch => {
   dispatch({ type: ADD_STUDY_START });
   axios
-    .post("xxxxxxxxx", study, {
+    .post("https://pintereach-3-be.herokuapp.com/api/articles/", study, {
       headers: { Authorization: localStorage.getItem("token") }
     })
     .then(res => {
@@ -127,7 +127,7 @@ export const ADD_BOARD_FAILURE = "ADD_BOARD_FAILURE";
 export const addBoard = (name, id) => dispatch => {
   dispatch({ type: ADD_BOARD_START });
   axios
-    .post(`xxxxxxxxxxxxx`, name, {
+    .post(`https://pintereach-3-be.herokuapp.com/api/articles/:id`, name, {
       headers: { Authorization: localStorage.getItem("token") }
     })
     .then(res => {

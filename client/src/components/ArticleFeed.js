@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { RemoveCircleOutline } from "@styled-icons/material/RemoveCircleOutline";
-import axios from "axios";
 
 const RemoveCircleOutlineRed = styled(RemoveCircleOutline)`
   color: red;

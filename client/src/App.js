@@ -23,10 +23,14 @@ export default function App() {
         <div className="body">
           <Route exact path="/" component={Signup} />
           <Route exact path="/login" component={Login} />
-          <PrivateRoute exact path="/home" component={UserHome} />
-          <PrivateRoute exact path="/add-pin" component={AddStudyForm} />
-          <PrivateRoute exact path="/add-board" component={Boards} />
-          <PrivateRoute exact path="/profile" component={UserProfile} />
+          <Route exact path="/home" component={UserHome} />
+          <Route exact path="/add-pin" component={AddStudyForm} />
+          <Route exact path="/add-board" component={Boards} />
+          <Route exact path="/profile" component={UserProfile} />
+          <Route exact path="/add-article" component={AddArticle} />
+          <Route exact path="/display-article" component={DisplayArticles} />
+          <Route exact path="/new-article-renderer" component={NewArticleRenderer} />
+
         </div>
       </div>
     </Router>

@@ -24,7 +24,6 @@ const GithubLogo = styled(Github)`
 class Signup extends React.Component {
   state = {
     signupCredentials: {
-      email: "",
       username: "",
       password: ""
     }
@@ -56,17 +55,9 @@ class Signup extends React.Component {
               Pintereach
             </h1>
             <h2>
-              Sign up to connect with the world's most efficient researchers
+              Sign up to start saving articles!
             </h2>
             <form onSubmit={this.signup}>
-              <input
-                type="email"
-                name="email"
-                placeholder="Email"
-                value={this.state.signupCredentials.email}
-                onChange={this.changeHandler}
-                required
-              />
               <input
                 type="text"
                 name="username"

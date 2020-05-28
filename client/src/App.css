@@ -1,9 +1,9 @@
 html {
   font-family: "Roboto", sans-serif;
   height: 100%;
-  background-color: #f6fbff;
+  background-color: #5B8C5A;
 }
-
+/* background-color: #f6fbff; */
 h1 {
   font-family: "Advent Pro", sans-serif;
   font-size: 3rem;
@@ -27,19 +27,20 @@ h1 {
 .step-2 {
   text-align: center;
   margin: 100px auto 20px auto;
-  border: 1px solid #58718138;
+  border: 1px solid #596157;
   border-radius: 2px;
   padding: 0 20px 20px 20px;
   max-width: 360px;
-  background-color: #fff;
+  background-color: #CFD186;
 }
-
+/* border: 1px solid #58718138; */
+/* background-color: #fff; */
 .account > a {
   text-decoration: none;
-  color: #005995;
+  color: purple;
   font-weight: 600;
 }
-
+/* color: #005995; */ 
 .account > a:active {
   color: #157cc0;
 }
@@ -49,7 +50,7 @@ h1 {
   margin-top: 5px;
 
   padding-top: 15px;
-  border-top: 1px solid lightgray;
+  border-top: 1px solid #596157;
 }
 
 form {
@@ -66,9 +67,10 @@ input {
   width: 100%;
   height: 35px;
   cursor: text;
-  border: 1px solid lightgray;
+  border: 1px solid #596157;
   border-radius: 2px;
 }
+/* border: 1px solid lightgray; */
 
 /* input[type="password"]:focus {
   outline: 2px solid #305d81;
@@ -78,26 +80,26 @@ button {
   width: 99%;
   height: 31px;
   margin: 10px 0;
-  background-color: #005995;
-  color: white;
+  background-color: #552244;
+  color: #fff;
   border-radius: 4px;
   border: none;
   cursor: pointer;
   font-weight: 700;
   font-size: 1rem;
 }
-
+/* background-color: #005995; */
 button:focus {
   outline: 0;
 }
 button:active {
-  background-color: #157cc0;
+  background-color: #CFD186;
 }
 
 button:hover {
-  background-color: #157cc0;
+  background-color: #596157;
 }
-
+/* background-color: #157cc0; */
 h2 {
   font-size: 1.05rem;
   padding-bottom: 20px;
@@ -106,13 +108,13 @@ h2 {
 
 .nav {
   height: 55px;
-  background-color: #fff;
-  border-bottom: 1.5px solid #bfcad0;
+  background-color: #CFD186;
+  border-bottom: 1.5px solid #596157;
   position: fixed;
   width: 100%;
   top: 0;
 }
-
+/* border-bottom: 1.5px solid #bfcad0; */
 .navbar {
   margin: 0 auto;
   display: flex;
@@ -136,24 +138,24 @@ h2 {
 }
 
 .navbar > .activeNavBtn {
-  background-color: #f34b4b;
-  opacity: 1;
+  background-color: #552244;
+  opacity: 0.85;
 }
-
+/* background-color: #f34b4b; */
 .navbar > a:hover {
-  background-color: #f34b4bc7;
+  background-color: #552244;
 }
-
+/*  background-color: #f34b4bc7; */
 footer {
   text-align: center;
-  color: rgb(145, 143, 143);
+  color: black;
   width: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row-reverse;
 }
-
+/* color: rgb(145, 143, 143); */
 footer > p {
   margin: 0;
   padding-right: 10px;
@@ -326,10 +328,10 @@ footer > a {
 }
 
 .profile {
-  background-color: #fff;
+  background-color: #CFD186;
   padding: 20px;
 }
-
+/* background-color: #fff; */
 .profile button {
   width: 150px;
   margin-top: 10px;
@@ -413,10 +415,10 @@ footer > a {
   color: rgb(122, 120, 120);
 }
 .profile {
-  border: 1px solid #00599546;
+  border: 1px solid #596157;
   width: 300px;
 }
-
+/* border: 1px solid #00599546; */
 .title-block {
   display: flex;
   width: 90%;
@@ -539,9 +541,11 @@ img {
     position: fixed;
     width: 100%;
     bottom: 0;
-    background-color: white;
-    border-top: 2px solid darkgray;
+    background-color: #CFD186;
+    border-top: 2px solid #596157;
   }
+  /* background-color: white; */
+  /* border-top: 2px solid darkgray; */
   .navbar h1 {
     display: none;
   }

@@ -1,19 +1,21 @@
 import React from "react";
 import styled from "styled-components";
 
-const ArticleTitles = styled.h2`
-    font-size: 1.5rem;
-    line-height: 1.25;
-`;
-
 const ArticleCard = styled.div`
-    background-color:#1d5994;
+    background-color: #552244;
     width: auto;
     padding: 1%;
     margin: 3% 5%;
     text-align: left;
-    color: white;
-    border-radius: 5px;
+    color: #fff;
+    border: 1.4px solid #000;
+    border-radius: 3px;
+`;
+/* background-color:#1d5994; */
+
+const ArticleTitles = styled.h2`
+    font-size: 1.5rem;
+    line-height: 1.25;
 `;
 
 const ArticlePTags = styled.p`
@@ -22,7 +24,7 @@ const ArticlePTags = styled.p`
 `;
 
 const ArticleLinks = styled.a`
-    color: white;
+    color: #fff;
 `;
 
 const ArticleCards = props => {

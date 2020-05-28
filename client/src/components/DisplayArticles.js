@@ -1,7 +1,22 @@
-import React from 'react';
-import { useState, useEffect } from 'react';
-import axios from 'axios';
+import React from "react";
+import { useState, useEffect } from "react";
+import styled from "styled-components";
+import axios from "axios";
 import ArticleCards from "./ArticleCards";
+
+const HeaderContainer = styled.div`
+text-align: center;
+margin: 100px auto 20px auto;
+border: 1px solid #596157;
+border-radius: 2px;
+padding: 20px;
+width: auto;
+background-color: #CFD186;
+`;
+/* border: 1px solid #58718138; */
+const WhiteH1 = styled.h1`
+  color: #fff;
+`;
 
 const ApiTest = () => {
 
@@ -20,9 +35,9 @@ const ApiTest = () => {
 
   return (
     <div>
-      <div>
+      <HeaderContainer>
         <h1>Some articles that may interest you...</h1>
-      </div>
+      </HeaderContainer>
       <ArticleCards
         articlesData = {articlesData}
       />

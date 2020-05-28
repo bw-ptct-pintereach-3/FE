@@ -8,8 +8,8 @@ import { login } from "../actions";
 // import "../styles/Login.css";
 import { Github } from "@styled-icons/boxicons-logos/Github";
 
-const PinRed = styled(Pin)`
-  color: red;
+const PinPurple = styled(Pin)`
+  color: purple;
   height: 40px;
   width: 40px;
 `;
@@ -52,7 +52,7 @@ class Login extends React.Component {
         <div className="step-2">
           <section className="form-entry">
             <h1>
-              <PinRed />
+              <PinPurple />
               Pintereach
             </h1>
             <form onSubmit={this.login}>

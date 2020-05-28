@@ -2,8 +2,23 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import * as yup from "yup";
 
+const FormContainer = styled.div`
+    text-align: center;
+    margin: 100px auto 20px auto;
+    border: 1px solid #596157;
+    border-radius: 2px;
+    padding: 0 20px 20px 20px;
+    width: 50%;
+    background-color: #CFD186;
+`;
+
 const FormHeader = styled.h1`
     text-align: center;
+`;
+
+const FormBorder = styled.form`
+    border: 2px solid #596157;
+    border-radius: 3px;
 `;
 
 const Subheadings = styled.h2`
@@ -95,9 +110,9 @@ const AddArticle = (props) => {
     };
 
     return (
-        <div>
+        <FormContainer>
             <FormHeader>Add your articles here.</FormHeader>
-            <form onSubmit={formSubmit}>
+            <FormBorder onSubmit={formSubmit}>
                 <label htmlFor="articleUrl">
                 <Subheadings>Article URL:</Subheadings>
                 <input
@@ -136,8 +151,8 @@ const AddArticle = (props) => {
                 </AlignedDropdownDiv>
                 
                 <AddArticleButton disabled={buttonDisabled}>Add Article</AddArticleButton>
-            </form>
-        </div>
+            </FormBorder>
+        </FormContainer>
     );
 };
 

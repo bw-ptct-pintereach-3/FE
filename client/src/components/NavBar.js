@@ -20,8 +20,8 @@ const OpenBookBlack = styled(OpenBook)`
   width: 30px;
 `;
 
-const PinRed = styled(Pin)`
-  color: red;
+const PinPurple = styled(Pin)`
+  color: purple;
   height: 30px;
   width: 30px;
   transform: rotate(-20deg);
@@ -56,7 +56,7 @@ const NavBar = () => {
   return (
     <div className="navbar">
       <h1>
-        <PinRed />
+        <PinPurple />
         Pintereach
       </h1>
       <NavLink to="/displayArticles" activeClassName="activeNavBtn">

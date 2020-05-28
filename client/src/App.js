@@ -17,21 +17,11 @@ export default function App() {
           <NavBar />
         </div>
         <div className="body">
-        <Route exact path="/" component={Signup} />
+          <Route exact path="/" component={Signup} />
           <Route exact path="/login" component={Login} />
-<<<<<<< HEAD
-          <Route exact path="/home" component={UserHome} />
-          <Route exact path="/add-pin" component={AddStudyForm} />
-          <Route exact path="/add-board" component={Boards} />
-          <Route exact path="/profile" component={UserProfile} />
-          <Route exact path="/toReadList" component={NewArticleRenderer} /> 
-          <Route exact path="/displayArticles" component={DisplayArticles} />
-=======
           <PrivateRoute exact path="/profile" component={UserProfile} />
           <PrivateRoute exact path="/toReadList" component={NewArticleRenderer} /> 
           <PrivateRoute exact path="/displayArticles" component={DisplayArticles} />
-
->>>>>>> master
         </div>
       </div>
     </Router>

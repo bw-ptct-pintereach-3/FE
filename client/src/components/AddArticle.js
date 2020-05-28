@@ -1,11 +1,31 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import * as yup from "yup";
+
+const FormHeader = styled.h1`
+    text-align: center;
+`;
+
+const Subheadings = styled.h2`
+    font-size: 1.5rem;
+    padding: 5% 0;
+`;
+
+const AlignedDropdownDiv = styled.div`
+    text-align: center;
+    padding: 5%;
+`;
+
+const AddArticleButton = styled.button`
+    width: auto;
+    height: auto;
+    padding: 1% 6%;
+`;
 
 const formSchema = yup.object().shape({
     articleUrl: yup 
         .string()
-        .required("An article URL is required."),
+        .required("A URL is required."),
     category: yup
         .string()
         .required("An article category is required.")
@@ -21,7 +41,15 @@ const AddArticle = (props) => {
     const [errorState, setErrorState] = useState({
         articleUrl: "",
         category: ""
-    })
+    });
+
+    const [buttonDisabled, setButtonDisabled] = useState(true); 
+    useEffect(() => {
+        formSchema.isValid(formState)
+            .then(valid => {
+                setButtonDisabled(!valid);
+            });
+    }, [formState]);
 
     const clearForm = () => {
         setFormState({ 
@@ -68,11 +96,10 @@ const AddArticle = (props) => {
 
     return (
         <div>
-            <h2>Make a to-read list.</h2>
+            <FormHeader>Add your articles here.</FormHeader>
             <form onSubmit={formSubmit}>
-
                 <label htmlFor="articleUrl">
-                Article URL: 
+                <Subheadings>Article URL:</Subheadings>
                 <input
                     type="text"
                     name="articleUrl"
@@ -80,33 +107,35 @@ const AddArticle = (props) => {
                     value={formState.articleUrl}
                     onChange={inputChange}
                 />
-                {errorState.length > 0 ? (
+                {errorState.articleUrl.length > 0 ? (
                     <p>{errorState.articleUrl}</p>
                 ) : null}
                 </label>
 
+                <AlignedDropdownDiv>
                 <label htmlFor="category">
-                Please choose a category.
+                <Subheadings>Article Category:</Subheadings>
                 <select
                     name="category"
                     id="category"
                     value={formState.category}
                     onChange={inputChange}
                 >
-                    <option value="Education">Education</option>
-                    <option value="Recreation">Recreation</option>
-                    <option value="Cooking">Cooking</option>
-                    <option value="Shopping">Shopping</option>
-                    <option value="Technology">Technology</option>
-                    <option value="Entertainment">Entertainment</option>
-                    <option value="Professional">Professional</option>
-                    <option value="Health">Health</option>
-                    <option value="Sports">Sports</option>
-                    <option value="Other">Other</option>
+                    <option value="Category: Education">Education</option>
+                    <option value="Category: Recreation">Recreation</option>
+                    <option value="Category: Cooking">Cooking</option>
+                    <option value="Category: Shopping">Shopping</option>
+                    <option value="Category: Technology">Technology</option>
+                    <option value="Category: Entertainment">Entertainment</option>
+                    <option value="Category: Professional">Professional</option>
+                    <option value="Category: Health">Health</option>
+                    <option value="Category: Sports">Sports</option>
+                    <option value="Category: Other">Other</option>
                 </select>
                 </label>
-                    
-                <button>Add to Your To-read List</button>
+                </AlignedDropdownDiv>
+                
+                <AddArticleButton disabled={buttonDisabled}>Add Article</AddArticleButton>
             </form>
         </div>
     );

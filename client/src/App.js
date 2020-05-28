@@ -29,7 +29,6 @@ export default function App() {
           <PrivateRoute exact path="/profile" component={UserProfile} />
           <PrivateRoute exact path="/toReadList" component={NewArticleRenderer} /> 
           <PrivateRoute exact path="/displayArticles" component={DisplayArticles} />
-
         </div>
       </div>
     </Router>

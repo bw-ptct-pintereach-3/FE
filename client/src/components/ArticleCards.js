@@ -7,7 +7,6 @@ const ArticleTitles = styled.h2`
 `;
 
 const ArticleCard = styled.div`
-    
     background-color:#1d5994;
     width: auto;
     padding: 1%;
@@ -22,6 +21,10 @@ const ArticlePTags = styled.p`
     line-height: 1.25;
 `;
 
+const ArticleLinks = styled.a`
+    color: white;
+`;
+
 const ArticleCards = props => {
     
     return (
@@ -32,7 +35,7 @@ const ArticleCards = props => {
                         <ArticleTitles>{article.title}</ArticleTitles>
                         <ArticlePTags>date: {article.published_date}</ArticlePTags>
                         <ArticlePTags>Abstract: {article.abstract}</ArticlePTags>
-                        <ArticlePTags>URL: {article.url}</ArticlePTags>
+                        <ArticlePTags>URL: <ArticleLinks href={article.url} target="_blank">{article.url}</ArticleLinks></ArticlePTags>
                     </ArticleCard>
                 ) 
             })}

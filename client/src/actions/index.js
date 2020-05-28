@@ -9,11 +9,13 @@ export const login = creds => dispatch => {
   return axios
     .post("https://pintereach-3-be.herokuapp.com/api/auth/login", creds)
     .then(res => {
+      console.log("loggingin", res.data.username);
       localStorage.setItem("token", res.data.token);
       localStorage.setItem("id", res.data.id);
       dispatch({ type: LOGIN_SUCCESS, payload: res.data });
     });
 };
+
 
 export const signup = creds => dispatch => {
   dispatch({ type: SIGNUP_START });

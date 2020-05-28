@@ -3,11 +3,7 @@ import AddArticle from "./AddArticle";
 import UserArticleCardMaker from "./UserArticleCardMaker";
 
 const NewArticleRenderer = () => {
-    const [newArticles, setNewArticles] = useState([{
-        articleUrl: "",
-        category: ""
-        }
-    ])
+    const [newArticles, setNewArticles] = useState([])
 
     const handleFormSubmission = (newArticle) => {
         setNewArticles([...newArticles, newArticle])

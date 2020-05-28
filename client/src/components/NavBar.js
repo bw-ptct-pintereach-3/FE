@@ -5,7 +5,7 @@ import { Home } from "@styled-icons/boxicons-solid/Home";
 import { Category } from "@styled-icons/material-rounded/Category";
 import { Pin } from "@styled-icons/boxicons-solid/Pin";
 import { UserDetail } from "@styled-icons/boxicons-solid/UserDetail";
-import { ListPlus, ListPlusDimensions } from "@styled-icons/boxicons-regular/ListPlus";
+import { ListPlus } from "@styled-icons/boxicons-regular/ListPlus";
 import { OpenBook } from "@styled-icons/entypo/OpenBook";
 
 const ListPlusBlack = styled(ListPlus)`

@@ -38,7 +38,7 @@ export const FETCH_DATA_FAILURE = "FETCH_DATA_FAILURE";
 export const getData = id => dispatch => {
   dispatch({ type: FETCH_DATA_START });
   axios
-    .get(`https://pintereach-3-be.herokuapp.com/api/articles/`, {
+    .get(`https://pintereach-3-be.herokuapp.com/api/articles/${id}`, {
       headers: { Authorization: localStorage.getItem("token") }
     })
     .then(res => {
@@ -92,7 +92,7 @@ export const DELETE_FAILURE = "DELETE_FAILURE";
 export const deleteArticle = (id, user_id) => dispatch => {
   dispatch({ type: DELETE_START });
   axios
-    .delete(`https://pintereach-3-be.herokuapp.com/api/articles/:id`, {
+    .delete(`https://pintereach-3-be.herokuapp.com/api/articles/${id}`, {
       headers: { Authorization: localStorage.getItem("token") }
     })
     .then(res => {
@@ -129,7 +129,7 @@ export const ADD_BOARD_FAILURE = "ADD_BOARD_FAILURE";
 export const addBoard = (name, id) => dispatch => {
   dispatch({ type: ADD_BOARD_START });
   axios
-    .post(`https://pintereach-3-be.herokuapp.com/api/articles/:id`, name, {
+    .post(`https://pintereach-3-be.herokuapp.com/api/articles/${id}`, name, {
       headers: { Authorization: localStorage.getItem("token") }
     })
     .then(res => {

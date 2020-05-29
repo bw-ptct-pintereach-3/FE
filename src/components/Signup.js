@@ -93,7 +93,7 @@ class Signup extends React.Component {
           </section>
         </div>
         <footer>
-          <a href="xxxxxxxxx">
+          <a href="https://github.com/bw-ptct-pintereach-3">
             <GithubLogo />
           </a>
           <p> &copy; 2020 Pintereach</p>

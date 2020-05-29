@@ -15,11 +15,10 @@ const PinRed = styled(Pin)`
 class AddStudyForm extends React.Component {
   state = {
     study: {
-      title: "",
-      cover_page: "whatever a coverpage is",
-      link: "",
+      id: "",
+      url: "",
       user_id: "",
-      categories_id: ""
+      category_id: ""
     }
   };
 
@@ -40,11 +39,10 @@ class AddStudyForm extends React.Component {
     this.props.history.push("/home");
     this.setState({
       study: {
-        title: "testing",
-        cover_page: "whatever a coverpage is",
-        link: "",
-        user_id: this.props.id,
-        categories_id: ""
+        id: "",
+        url: "",
+        user_id: "",
+        category_id: ""
       }
     });
   };
@@ -60,10 +58,10 @@ class AddStudyForm extends React.Component {
 
             <input
               type="number"
-              name="categories_id"
+              name="category_id"
               placeholder="Board Name (aka category)"
               onChange={this.changeHandler}
-              value={this.state.study.categories_id}
+              value={this.state.study.category_id}
               required
             />
 
@@ -77,10 +75,10 @@ class AddStudyForm extends React.Component {
             />
             <input
               type="url"
-              name="link"
-              placeholder="Link"
+              name="url"
+              placeholder="url"
               onChange={this.changeHandler}
-              value={this.state.study.link}
+              value={this.state.study.url}
               required
             />
 

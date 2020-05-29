@@ -88,11 +88,11 @@ class UserHome extends React.Component {
                   <h2>Your Pins</h2>
                   <div className="btns" />
                 </div>
-                <ArticleFeed
+                {/* <ArticleFeed
                   {...props}
                   articles={this.props.articles}
                   deleteArticle={this.props.deleteArticle}
-                />
+                /> */}
               </div>
             )}
           />

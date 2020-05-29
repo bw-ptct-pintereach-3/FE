@@ -31,12 +31,12 @@ class ArticleFeed extends React.Component {
               <p>@{article.postedBy}</p>
             </div>
             <a
-              href={article.link}
+              href={article.url}
               target="_blank"
               without
               rel="noopener noreferrer"
             >
-              {article.link}
+              {article.url}
             </a>
 
             <RemoveCircleOutlineRed

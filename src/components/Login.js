@@ -43,7 +43,7 @@ class Login extends React.Component {
 
     this.props
       .login(this.state.credentials)
-      .then(() => this.props.history.push("/home"));
+      .then(() => this.props.history.push("/displayArticles"));
   };
 
   render() {
@@ -94,7 +94,7 @@ class Login extends React.Component {
           </section>
         </div>
         <footer>
-          <a href="xxxxxxxxxx">
+          <a href="https://github.com/bw-ptct-pintereach-3">
             <GithubLogo />
           </a>
           <p> &copy; 2020 Pintereach</p>

@@ -89,7 +89,7 @@ export const DELETE_START = "DELETE_START";
 export const DELETE_SUCCESS = "DELETE_SUCCESS";
 export const DELETE_FAILURE = "DELETE_FAILURE";
 
-export const deleteArticle = (id ) => dispatch => {
+export const deleteArticle = (id, user_id) => dispatch => {
   dispatch({ type: DELETE_START });
   axios
     .delete(`https://pintereach-3-be.herokuapp.com/api/articles/${id}`, {

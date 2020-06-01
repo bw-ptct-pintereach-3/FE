@@ -5,7 +5,6 @@ import { Link, Route } from "react-router-dom";
 import styled from "styled-components";
 import { PlusCircle } from "@styled-icons/boxicons-regular/PlusCircle";
 import { deleteArticle, getData, getData2, getData3 } from "../actions";
-import ArticleFeed from "./ArticleFeed";
 import BoardFeed from "./BoardFeed";
 
 const AddWhite = styled(PlusCircle)`
@@ -68,35 +67,12 @@ class UserHome extends React.Component {
           />
         </div>
         <div className="side">
-          {/* <Link to="/add-board">
-            <button>
-              <AddWhite />
-              Add Board
-            </button>
-          </Link> */}
           <Link to="/add-pin">
             <button className="last">
               <AddWhite />
               Add Pin
             </button>
           </Link>
-          {/* <Route
-            exact
-            path="/home"
-            render={props => (
-              <div className="home">
-                <div className="title-block">
-                  <h2>Your Pins</h2>
-                  <div className="btns" />
-                </div>
-                <ArticleFeed
-                  {...props}
-                  articles={this.props.articles}
-                  deleteArticle={this.props.deleteArticle}
-                />
-              </div>
-            )}
-          /> */}
         </div>
       </div>
     );

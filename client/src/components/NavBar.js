@@ -2,7 +2,6 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { Home } from "@styled-icons/boxicons-solid/Home";
-// import { Category } from "@styled-icons/material-rounded/Category";
 import { Pin } from "@styled-icons/boxicons-solid/Pin";
 import { UserDetail } from "@styled-icons/boxicons-solid/UserDetail";
 import { ListPlus } from "@styled-icons/boxicons-regular/ListPlus";
@@ -70,10 +69,6 @@ const NavBar = () => {
       <NavLink to="/toReadList" activeClassName="activeNavBtn">
         <ListPlusBlack />
       </NavLink>
-
-      {/* <NavLink exact to="/add-board" activeClassName="activeNavBtn">
-        <CategoryBlack />
-      </NavLink> */}
 
       <NavLink exact to="/add-pin" activeClassName="activeNavBtn">
         <PinBlack />

@@ -8,7 +8,7 @@ const ArticleTitles = styled.h2`
 
 const ArticleCard = styled.div`
     
-    background-color:#1d5994;
+    background-color:#552244;
     width: auto;
     padding: 1%;
     margin: 3% 5%;

@@ -42,7 +42,7 @@ class BoardFeed extends React.Component {
           {this.props.articles.map(article => (
             <div className="article-card" key={article.id}>
               <div className="title">
-                <h3>Category ID:{article.category_id}</h3>
+                <h3>Category:{article.category_id}</h3>
                 <p>User ID:{article.user_id}</p>
               </div>
               <a href={article.url}>

@@ -50,7 +50,7 @@ class UserHome extends React.Component {
     return (
       <div className="main">
         <div className="feed">
-          <h2>Categories/Board Feed</h2>
+          <h2>Your Board & Categories</h2>
 
           <Route
             exact
@@ -68,19 +68,19 @@ class UserHome extends React.Component {
           />
         </div>
         <div className="side">
-          <Link to="/add-board">
+          {/* <Link to="/add-board">
             <button>
               <AddWhite />
               Add Board
             </button>
-          </Link>
+          </Link> */}
           <Link to="/add-pin">
             <button className="last">
               <AddWhite />
               Add Pin
             </button>
           </Link>
-          <Route
+          {/* <Route
             exact
             path="/home"
             render={props => (
@@ -96,7 +96,7 @@ class UserHome extends React.Component {
                 />
               </div>
             )}
-          />
+          /> */}
         </div>
       </div>
     );

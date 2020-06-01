@@ -480,12 +480,16 @@ p {
   padding-right: 10px;
 }
 
+ol {
+  padding-bottom: 4%;
+}
+
 .article-card > svg:hover {
   transform: scale(1.1);
 }
 
 .main > .side > a > button {
-  width: 40%;
+  /* width: 40%; */
   margin: 19px;
   height: 45px;
 }

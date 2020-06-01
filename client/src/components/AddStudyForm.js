@@ -15,9 +15,7 @@ const PinRed = styled(Pin)`
 class AddStudyForm extends React.Component {
   state = {
     study: {
-      id: "",
       url: "",
-      user_id: "",
       category_id: ""
     }
   };
@@ -34,13 +32,12 @@ class AddStudyForm extends React.Component {
 
   addStudy = e => {
     e.preventDefault();
+    console.log("Addstudy", this.state.study);
     this.props.addStudy(this.state.study);
     this.props.history.push("/home");
     this.setState({
       study: {
-        id: this.props.id,
         url: "",
-        user_id: this.props.id,
         category_id: "",
       }
     });
@@ -81,25 +78,13 @@ class AddStudyForm extends React.Component {
               <input
                 type="number"
                 name="category_id"
-                placeholder="Category"
+                placeholder="Category Number"
                 onChange={this.changeHandler}
                 value={this.state.study.category_id}
                 required
               />
-
-              <button>
-                {/* {this.props.addingStudy ? ( */}
-                  {this.props.addStudy ? (
-                  <Loader
-                    type="TailSpin"
-                    color="white"
-                    height={18}
-                    width={18}
-                  />
-                ) : (
-                  "Add Pin"
-                )}
-              </button>
+          <button onClick={this.addStudy}>Add Pin
+        </button>
             </form>
           </div>
         </div>

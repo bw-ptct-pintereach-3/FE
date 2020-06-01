@@ -43,7 +43,7 @@ class Login extends React.Component {
 
     this.props
       .login(this.state.credentials)
-      .then(() => this.props.history.push("/displayArticles"));
+      .then(() => this.props.history.push("/add-pin"));
   };
 
   render() {

@@ -9,7 +9,7 @@ import { login } from "../actions";
 import { Github } from "@styled-icons/boxicons-logos/Github";
 
 const PinRed = styled(Pin)`
-  color: red;
+  color: #552244;
   height: 40px;
   width: 40px;
 `;

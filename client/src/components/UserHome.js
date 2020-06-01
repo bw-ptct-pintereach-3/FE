@@ -50,7 +50,7 @@ class UserHome extends React.Component {
     return (
       <div className="main">
         <div className="feed">
-          <h2>Board Feed</h2>
+          <h2>Categories/Board Feed</h2>
 
           <Route
             exact
@@ -61,6 +61,7 @@ class UserHome extends React.Component {
                   {...props}
                   boards={this.props.boards}
                   articles={this.props.allArticles}
+                  deleteArticle={this.props.deleteArticle}
                 />
               </div>
             )}
@@ -88,11 +89,11 @@ class UserHome extends React.Component {
                   <h2>Your Pins</h2>
                   <div className="btns" />
                 </div>
-                {/* <ArticleFeed
+                <ArticleFeed
                   {...props}
                   articles={this.props.articles}
                   deleteArticle={this.props.deleteArticle}
-                /> */}
+                />
               </div>
             )}
           />

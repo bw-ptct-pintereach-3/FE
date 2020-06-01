@@ -6,7 +6,7 @@ import { Category } from "@styled-icons/material-rounded/Category";
 import { addBoard } from "../actions";
 
 const CategoryBlack = styled(Category)`
-  color: red;
+  color: #552244;
   height: 30px;
   width: 30px;
   padding-right: 10px;

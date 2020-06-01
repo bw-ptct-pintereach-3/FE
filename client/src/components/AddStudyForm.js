@@ -6,7 +6,7 @@ import { Pin } from "@styled-icons/boxicons-solid/Pin";
 import { addStudy } from "../actions";
 
 const PinRed = styled(Pin)`
-  color: red;
+  color: #552244;
   height: 30px;
   width: 30px;
   transform: rotate(-20deg);
@@ -38,10 +38,10 @@ class AddStudyForm extends React.Component {
     this.props.history.push("/home");
     this.setState({
       study: {
-        id: "",
+        id: this.props.id,
         url: "",
-        user_id: "",
-        category_id: ""
+        user_id: this.props.id,
+        category_id: "",
       }
     });
   };
@@ -52,18 +52,23 @@ class AddStudyForm extends React.Component {
         <div className="main">
           <div className="add-study-form">
             <form onSubmit={this.addStudy}>
-              <h2>
+              <h1>
                 <PinRed /> Add Pins to a Board
-              </h2>
+              </h1>
+              <h2>Category Numbers</h2>
+              <ol>
+                <li>1 = Education</li>
+                <li>2 = Recreation</li>
+                <li>3 = Cooking</li>
+                <li>4 = Shopping</li>
+                <li>5 = Technology</li>
+                <li>6 = Entertainment</li>
+                <li>7 = Professional</li>
+                <li>8 = Health</li>
+                <li>9 = Sports</li>
+                <li>10 = Other</li>
+              </ol>
 
-              <input
-                type="text"
-                name="title"
-                placeholder="Title"
-                onChange={this.changeHandler}
-                value={this.state.study.title}
-                required
-              />
               <input
                 type="url"
                 name="url"
@@ -72,17 +77,19 @@ class AddStudyForm extends React.Component {
                 value={this.state.study.url}
                 required
               />
+              
               <input
                 type="number"
                 name="category_id"
-                placeholder="Board Id"
+                placeholder="Category"
                 onChange={this.changeHandler}
                 value={this.state.study.category_id}
                 required
               />
 
               <button>
-                {this.props.addingStudy ? (
+                {/* {this.props.addingStudy ? ( */}
+                  {this.props.addStudy ? (
                   <Loader
                     type="TailSpin"
                     color="white"
@@ -101,8 +108,13 @@ class AddStudyForm extends React.Component {
   }
 }
 
-const mapStateToProps = ({ addingStudy, id }) => ({
-  addingStudy,
+// const mapStateToProps = ({ addingStudy, id }) => ({
+//   addingStudy,
+//   id
+// });
+
+const mapStateToProps = ({ addStudy, id }) => ({
+  addStudy,
   id
 });
 

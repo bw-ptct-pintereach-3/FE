@@ -28,7 +28,8 @@ import {
     token: localStorage.getItem("token"),
     id: localStorage.getItem("id"),
     errorStatusCode: null,
-    addingStudy: false,
+    // addingStudy: false,
+    addStudy: false,
     loggingIn: false,
     fetchingArticles: false,
     signingUp: false,
@@ -123,12 +124,14 @@ import {
       case ADD_STUDY_START:
         return {
           ...state,
-          addingStudy: true
+          // addingStudy: true
+          addStudy: true
         };
       case ADD_STUDY_SUCCESS:
         return {
           ...state,
-          addingStudy: false
+          // addingStudy: false
+          addStudy: false
         };
       case LOGOUT_START:
         return {

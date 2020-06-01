@@ -20,6 +20,7 @@ class BoardFeed extends React.Component {
     this.setState({ deletingArticle:id});
     this.props.deleteArticle(id);
   };
+  
   render() {
     return (
       <>

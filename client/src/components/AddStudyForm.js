@@ -1,5 +1,4 @@
 import React from "react";
-import Loader from "react-loader-spinner";
 import { connect } from "react-redux";
 import styled from "styled-components";
 import { Pin } from "@styled-icons/boxicons-solid/Pin";
@@ -65,6 +64,8 @@ class AddStudyForm extends React.Component {
                 <li>9 = Sports</li>
                 <li>10 = Other</li>
               </ol>
+
+              <h2>Add at least one to get started!</h2>
 
               <input
                 type="url"

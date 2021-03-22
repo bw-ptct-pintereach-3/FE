@@ -4,14 +4,14 @@ import styled from "styled-components";
 import { Home } from "@styled-icons/boxicons-solid/Home";
 import { Pin } from "@styled-icons/boxicons-solid/Pin";
 import { UserDetail } from "@styled-icons/boxicons-solid/UserDetail";
-import { ListPlus } from "@styled-icons/boxicons-regular/ListPlus";
+// import { ListPlus } from "@styled-icons/boxicons-regular/ListPlus";
 import { OpenBook } from "@styled-icons/entypo/OpenBook";
 
-const ListPlusBlack = styled(ListPlus)`
-  color: black;
-  height: 30px;
-  width: 30px;
-`;
+// const ListPlusBlack = styled(ListPlus)`
+//   color: black;
+//   height: 30px;
+//   width: 30px;
+// `;
 
 const OpenBookBlack = styled(OpenBook)`
   color: black;
@@ -66,9 +66,9 @@ const NavBar = () => {
         <OpenBookBlack />
       </NavLink>
 
-      <NavLink to="/toReadList" activeClassName="activeNavBtn">
+      {/* <NavLink to="/toReadList" activeClassName="activeNavBtn">
         <ListPlusBlack />
-      </NavLink>
+      </NavLink> */}
 
       <NavLink exact to="/add-pin" activeClassName="activeNavBtn">
         <PinBlack />

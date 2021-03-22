@@ -7,7 +7,6 @@ import PrivateRoute from "./components/PrivateRoute";
 import Signup from "./components/Signup";
 import UserProfile from "./components/UserProfile";
 import DisplayArticles from "./components/DisplayArticles";
-import NewArticleRenderer from "./components/NewArticleRenderer";
 import AddStudyForm from "./components/AddStudyForm";
 import UserHome from "./components/UserHome";
 
@@ -24,7 +23,6 @@ export default function App() {
           <PrivateRoute exact path="/profile" component={UserProfile} />
           <PrivateRoute exact path="/home" component={UserHome} />
           <PrivateRoute exact path="/add-pin" component={AddStudyForm} />
-          <PrivateRoute exact path="/toReadList" component={NewArticleRenderer} /> 
           <PrivateRoute exact path="/displayArticles" component={DisplayArticles} />
         </div>
       </div>

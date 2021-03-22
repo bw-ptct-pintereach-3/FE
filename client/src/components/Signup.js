@@ -83,7 +83,7 @@ class Signup extends React.Component {
                     width={18}
                   />
                 ) : (
-                  "Sign up"
+                  "Sign Up"
                 )}
               </button>
             </form>
